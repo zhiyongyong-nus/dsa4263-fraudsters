@@ -10,7 +10,7 @@ This project focuses on detecting cybersecurity attacks using a combination of m
 
 All project datasets are stored in our [Google Drive Folder](https://drive.google.com/drive/folders/1IheCLjHlpWdNMZjccHZ7TaC7ZsoRBEwg?usp=sharing). Below is a summary of its contents:
 
-### 📂 Folder Structure:
+### Folder Structure:
 
 - **Raw Data**  
   Contains the original, unprocessed datasets from [CIC-IDS2017](https://www.unb.ca/cic/datasets/ids-2017.html) and [CSE-CIC-IDS2018](https://www.unb.ca/cic/datasets/ids-2018.html).
@@ -39,6 +39,18 @@ All project datasets are stored in our [Google Drive Folder](https://drive.googl
   - `traindata_2017_v2.csv`
   - `testdata_2018_v2.csv`
 
+---
+## 📁 Folder Structure 
+
+```
+.
+├── Models
+│   ├── baseline_model.ipynb --> contains feature selection and engineering steps, Logistic Regression (Baseline Model) and AdaBoost (Challenger Model) Results. 
+│   └── graph_ensemble_models.ipynb --> contains Graph Metric challenger models and an Ensembled model results (Averaged result of Logistic Regression, AdaBoost, Logistic Regression with graph metrics,  ADAboost with graph metrics).
+├── README.md 
+├── cybersec_EDA.ipynb --> contains Exploratory Data Analysis
+└── data_preprocessing.ipynb --> contains data cleaning and merging steps
+```
 
 ---
 
