@@ -22,8 +22,8 @@ All project datasets are stored in our [Google Drive Folder](https://drive.googl
 
 - **Train and Test Data for Baseline and AdaBoost Models**  
   Further processed data after basic feature selection and engineering, used to train and evaluate:
-  - Logistic Regression Baseline Model
-  - AdaBoost Challenger Model
+  - Logistic Regression (Baseline Model)
+  - AdaBoost (Challenger Model)
   
   Split into: 
   - `traindata_2017_v1.csv`
@@ -31,16 +31,10 @@ All project datasets are stored in our [Google Drive Folder](https://drive.googl
 
 
 - **Train and Test Data Merged with Graph Features**  
-  Enhanced datasets including graph-based metrics such as:
-  - Weighted degree
-  - PageRank
-  - Degree centrality
-  - k-core values  
-
-  Used to train graph-feature-enhanced models.
-  - Logistic Regression with graph metrics Challenger Model 
-  - ADAboost with graph metrics Challenger Model
-
+  Enhanced datasets including graph-based metrics and used to train graph-feature-enhanced models: 
+  - Logistic Regression with graph metrics (Challenger Model)
+  - ADAboost with graph metrics (Challenger Model)
+  
   Split into: 
   - `traindata_2017_v2.csv`
   - `testdata_2018_v2.csv`
