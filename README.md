@@ -16,12 +16,12 @@ All project datasets are stored in our [Google Drive Folder](https://drive.googl
   Contains the original, unprocessed datasets from [CIC-IDS2017](https://www.unb.ca/cic/datasets/ids-2017.html) and [CSE-CIC-IDS2018](https://www.unb.ca/cic/datasets/ids-2018.html).
 
 - **Preprocessed Data**  
-  Cleaned and merged datasets, split into:
+  Cleaned and merged datasets after passing PCAP files into CICFlowMeter, split into:
   - `all_2017.csv`
   - `ddos2018_cleaned.csv`
 
 - **Train and Test Data for Baseline and AdaBoost Models**  
-  Further processed data after basic feature selection and engineering, used to train and evaluate:
+  Further processed data after feature selection and engineering, used to train and evaluate:
   - Logistic Regression (Baseline Model)
   - AdaBoost (Challenger Model)
   
@@ -39,6 +39,18 @@ All project datasets are stored in our [Google Drive Folder](https://drive.googl
   - `traindata_2017_v2.csv`
   - `testdata_2018_v2.csv`
 
+- **Train and Test Data for GAT (and other challenger models)**  
+  Further processed data after feature selection and engineering, used to train and evaluate:
+  - GAT (Selected model)
+  - MLP
+  - GCN
+  - TGAT
+  - Upgraded TGAT
+  
+  Split into: 
+  - `2017_data.csv` (train data)
+  - `ddos2018_cleaned.csv` (test data)
+
 ---
 ## 📁 Folder Structure 
 
@@ -48,8 +60,17 @@ All project datasets are stored in our [Google Drive Folder](https://drive.googl
 │   ├── baseline_model.ipynb --> contains feature selection and engineering steps, Logistic Regression (Baseline Model) and AdaBoost (Challenger Model) Results. 
 │   └── graph_ensemble_models.ipynb --> contains Graph Metric challenger models and an Ensembled model results (Averaged result of Logistic Regression, AdaBoost, Logistic Regression with graph metrics,  ADAboost with graph metrics).
 ├── README.md 
+├── data_preprocessing.ipynb --> contains data cleaning and merging steps
 ├── cybersec_EDA.ipynb --> contains Exploratory Data Analysis
-└── data_preprocessing.ipynb --> contains data cleaning and merging steps
+├── baseline_model.ipynb --> Log Reg and ADABoost 
+├── graph_ensemble_models.ipynb --> ensembled LR, ADABoost with graph metrics
+├── mlp.ipynb --> baseline challenger model
+├── gat.ipynb --> best performing challenger model (main focus in report)
+├── gcn.ipynb --> challenger model
+├── tgat.ipynb --> challenger model
+└── upgraded_tgat.ipynb --> challenger model
+ 
+
 ```
 
 ---
