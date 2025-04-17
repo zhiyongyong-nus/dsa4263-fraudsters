@@ -40,7 +40,7 @@ All project datasets are stored in our [Google Drive Folder](https://drive.googl
   - `testdata_2018_v2.csv`
 
 
-> ⚠️ FYI  
+> **Note**
 > Train and test data for GAT (and other challenger models) were further processed from all_2017.csv and ddos2018_cleaned.csv. 
 > Relevant Challenger Models: 
 > - GAT (Selected model)  
