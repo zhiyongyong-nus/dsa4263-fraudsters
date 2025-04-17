@@ -1,0 +1,102 @@
+Preprocessed Data Dictionary
+
+Variable Name	Data Type	Description
+Flow ID	object	Unique identifier for each network flow
+Source IP	object	IP address of the sender
+Source Port	int64	Port number of the sender
+Destination IP	object	IP address of the receiver
+Destination Port	int64	Port number of the receiver
+Protocol	int64	Protocol used (e.g., TCP, UDP)
+Timestamp	object	Time when the flow started
+Flow Duration	int64	Total duration of the flow (in microseconds)
+Total Fwd Packets	int64	Number of packets sent in the forward direction
+Total Backward Packets	int64	Number of packets sent in the backward direction
+Total Length of Fwd Packets	int64	Total size of forward packets
+Total Length of Bwd Packets	float64	Total size of backward packets
+Fwd Packet Length Max/Min/Mean/Std	mixed	Statistics of forward packet sizes
+Bwd Packet Length Max/Min/Mean/Std	mixed	Statistics of backward packet sizes
+Flow Bytes/s	float64	Flow byte rate per second
+Flow Packets/s	float64	Flow packet rate per second
+Flow IAT Mean/Std/Max/Min	float64	Inter-arrival time stats between packets
+Fwd IAT Total/Mean/Std/Max/Min	float64	Inter-arrival time stats in the forward direction
+Bwd IAT Total/Mean/Std/Max/Min	float64	Inter-arrival time stats in the backward direction
+Fwd/Bwd PSH Flags	int64	PSH flag occurrences in forward/backward direction
+Fwd/Bwd URG Flags	int64	URG flag occurrences in forward/backward direction
+Fwd Header Length	int64	Header size of forward packets
+Bwd Header Length	int64	Header size of backward packets
+Fwd Packets/s	float64	Forward packet rate
+Bwd Packets/s	float64	Backward packet rate
+Min/Max Packet Length	int64	Packet size extremes in the flow
+Packet Length Mean/Std/Variance	float64	Statistics of all packet lengths
+FIN/SYN/RST/PSH Flag Count	int64	TCP flag counters
+ACK/URG/CWE/ECE Flag Count	int64	TCP flag counters
+Down/Up Ratio	float64	Ratio of download to upload size
+Average Packet Size	float64	Average size of packets
+Avg Fwd/Bwd Segment Size	float64	Average segment sizes
+Fwd/Bwd Avg Bytes/Bulk	int64	Average bytes per bulk transfer in each direction
+Fwd/Bwd Avg Packets/Bulk	int64	Average packets per bulk transfer
+Fwd/Bwd Avg Bulk Rate	int64	Bulk data rate
+Subflow Fwd/Bwd Packets	int64	Packet count in subflow
+Subflow Fwd/Bwd Bytes	int64	Byte count in subflow
+Init_Win_bytes_fwd/bwd	int64	Initial TCP window size
+act_data_pkt_fwd	int64	Count of actual data packets in forward direction
+min_seg_size_forward	int64	Minimum segment size in forward direction
+Active Mean/Std/Max/Min	float64	Active period stats
+Idle Mean/Std/Max/Min	float64	Idle period stats
+Label	int64	Class label (Benign = 0, Attack = 1)
+
+Processed and Feature Engineered Data Dictionary
+
+Column Name	Data Type	Description
+Flow Duration	int64	Total duration of the flow in microseconds
+Total Fwd Packets	int64	Total number of packets in the forward direction
+Total Backward Packets	int64	Total number of packets in the backward direction
+Total Length of Fwd Packets	float64	Total length of packets in the forward direction
+Fwd Packet Length Max	float64	Maximum length of a forward packet
+Fwd Packet Length Min	float64	Minimum length of a forward packet
+Fwd Packet Length Mean	float64	Mean length of forward packets
+Bwd Packet Length Max	float64	Maximum length of a backward packet
+Bwd Packet Length Min	float64	Minimum length of a backward packet
+Flow Bytes/s	float64	Number of bytes per second in the flow
+Flow Packets/s	float64	Number of packets per second in the flow
+Flow IAT Mean	float64	Mean inter-arrival time for packets in the flow
+Flow IAT Min	float64	Minimum inter-arrival time for packets in the flow
+Fwd IAT Mean	float64	Mean inter-arrival time in forward direction
+Fwd IAT Min	float64	Minimum inter-arrival time in forward direction
+Bwd IAT Total	float64	Total inter-arrival time in backward direction
+Bwd IAT Mean	float64	Mean inter-arrival time in backward direction
+Bwd IAT Std	float64	Standard deviation of inter-arrival time (backward)
+Bwd IAT Min	float64	Minimum inter-arrival time in backward direction
+Fwd PSH Flags	int64	Count of PSH flags in forward direction
+Bwd Packets/s	float64	Packets per second in backward direction
+Min Packet Length	float64	Minimum packet length in the flow
+Max Packet Length	float64	Maximum packet length in the flow
+Packet Length Mean	float64	Mean length of packets in the flow
+Packet Length Variance	float64	Variance of packet lengths in the flow
+FIN Flag Count	int64	Number of FIN flags seen in packets
+RST Flag Count	int64	Number of RST flags seen in packets
+PSH Flag Count	int64	Number of PSH flags seen in packets
+ACK Flag Count	int64	Number of ACK flags seen in packets
+URG Flag Count	int64	Number of URG flags seen in packets
+Down/Up Ratio	float64	Ratio of bytes from destination to source
+Init_Win_bytes_forward	int64	Initial window size in forward direction
+Init_Win_bytes_backward	int64	Initial window size in backward direction
+act_data_pkt_fwd	int64	Number of active data packets in forward direction
+min_seg_size_forward	int64	Minimum segment size in forward direction
+Active Mean	float64	Mean time a flow is active before going idle
+Active Std	float64	Standard deviation of active times
+Active Max	float64	Maximum active time
+Active Min	float64	Minimum active time
+Idle Std	float64	Standard deviation of idle time between flows
+Protocol_0	bool	One-hot encoded protocol = 0
+Protocol_6	bool	One-hot encoded protocol = 6
+Protocol_17	bool	One-hot encoded protocol = 17
+Label	category	Class label (Benign = 0, Attack = 1)
+
+Graph Metric Features Data Dictionary
+
+Variable Name	Data Type	Description
+average.weighted.degree	float64	Average weighted degree centrality of the source and destination IPs.
+average.page.rank	float64	Average PageRank values of the source and destination IPs.
+average.degree.centrality	float64	Average degree centrality of the source and destination IPs.
+average.k.core	float64	Average of the k-core values of the source and destination IPs.
