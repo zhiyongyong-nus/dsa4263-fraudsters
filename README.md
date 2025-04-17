@@ -56,7 +56,7 @@ All project datasets are stored in our [Google Drive Folder](https://drive.googl
 .
 ├── Models
 │   ├── baseline_model.ipynb --> contains feature selection and engineering steps, Logistic Regression (Baseline Model) and Adaboost Model (Challenger Model)
-│   ├── graph_ensemble_models.ipynb --> contains Graph Metric Challenger models and en Ensemble Model
+│   ├── graph_ensemble_models.ipynb --> contains Graph Metric Challenger models and an Ensemble Model
 │   ├── gat.ipynb --> best performing challenger model (main focus in report)
 │   ├── gat.py
 │   ├── gcn.ipynb --> challenger model
