@@ -39,17 +39,15 @@ All project datasets are stored in our [Google Drive Folder](https://drive.googl
   - `traindata_2017_v2.csv`
   - `testdata_2018_v2.csv`
 
-- **Train and Test Data for GAT (and other challenger models)**  
-  Further processed data after feature selection and engineering, used to train and evaluate:
-  - GAT (Selected model)
-  - MLP
-  - GCN
-  - TGAT
-  - Upgraded TGAT
-  
-  Split into: 
-  - `2017_data.csv` (train data)
-  - `ddos2018_cleaned.csv` (test data)
+
+> ⚠️ FYI  
+> Train and test data for GAT (and other challenger models) were further processed from all_2017.csv and ddos2018_cleaned.csv. 
+> Relevant Challenger Models: 
+> - GAT (Selected model)  
+> - MLP  
+> - GCN  
+> - TGAT  
+> - Upgraded TGAT
 
 ---
 ## 📁 Folder Structure 
@@ -57,22 +55,22 @@ All project datasets are stored in our [Google Drive Folder](https://drive.googl
 ```
 .
 ├── Models
-│   ├── baseline_model.ipynb
-│   ├── gat.ipynb
+│   ├── baseline_model.ipynb --> contains feature selection and engineering steps, Logistic Regression (Baseline Model) and Adaboost Model (Challenger Model)
+│   ├── graph_ensemble_models.ipynb --> contains Graph Metric Challenger models and en Ensemble Model
+│   ├── gat.ipynb --> best performing challenger model (main focus in report)
 │   ├── gat.py
-│   ├── gcn.ipynb
+│   ├── gcn.ipynb --> challenger model
 │   ├── gcn.py
-│   ├── graph_ensemble_models.ipynb
-│   ├── mlp.ipynb
+│   ├── mlp.ipynb --> baseline challenger model
 │   ├── mlp.py
 │   ├── supervised_pycaret_check.ipynb
-│   ├── tgat.ipynb
+│   ├── tgat.ipynb --> challenger model
 │   ├── tgat.py
 │   ├── upgraded_tgat.ipynb
 │   └── upgraded_tgat.py
 ├── README.md
-├── cybersec_EDA.ipynb
-├── data_preprocessing.ipynb
+├── cybersec_EDA.ipynb --> contains Exploratory Data Analysis
+├── data_preprocessing.ipynb --> contains data cleaning and merging steps
 ├── datadictionary.txt
 └── requirements.txt
 
