@@ -50,7 +50,7 @@ All project datasets are stored in our [Google Drive Folder](https://drive.googl
 > - Upgraded TGAT
 
 ---
-## 📁 Folder Structure 
+## 📁 Repository Structure 
 
 ```
 .
