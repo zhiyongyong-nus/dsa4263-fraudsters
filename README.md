@@ -56,17 +56,16 @@ All project datasets are stored in our [Google Drive Folder](https://drive.googl
 .
 ├── Models
 │   ├── baseline_model.ipynb --> contains feature selection and engineering steps, Logistic Regression (Baseline Model) and Adaboost Model (Challenger Model)
-│   ├── graph_ensemble_models.ipynb --> contains Graph Metric Challenger models and an Ensemble Model
-│   ├── gat.ipynb --> best performing challenger model (main focus in report)
+│   ├── graph_ensemble_models.ipynb --> Models trained with added Graph Metrics (Challenger Models) and an Ensemble Model 
+│   ├── gat.ipynb --> GAT (Challenger Model, final best performing model) 
 │   ├── gat.py
-│   ├── gcn.ipynb --> challenger model
+│   ├── gcn.ipynb --> A3TGCN2 (Challenger Model)
 │   ├── gcn.py
-│   ├── mlp.ipynb --> baseline challenger model
+│   ├── mlp.ipynb --> Baseline Challenger Model (not focused on in report)
 │   ├── mlp.py
-│   ├── supervised_pycaret_check.ipynb
-│   ├── tgat.ipynb --> challenger model
+│   ├── tgat.ipynb --> Challenger Model (not focused on in report)
 │   ├── tgat.py
-│   ├── upgraded_tgat.ipynb
+│   ├── upgraded_tgat.ipynb --> Challenger Model (not focused on in report)
 │   └── upgraded_tgat.py
 ├── README.md
 ├── cybersec_EDA.ipynb --> contains Exploratory Data Analysis
